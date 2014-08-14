@@ -1,1 +1,1 @@
-var PhotoApp = null;
+var PhotoApp = Ember.Application.create({});
