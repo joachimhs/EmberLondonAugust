@@ -1,1 +1,9 @@
-Photo Albums Template
+{{#each album in controller}}
+    <div>
+        {{#link-to "albums.album" album}}
+            {{album.id}}
+        {{/link-to}}
+    </div>
+{{/each}}
+
+{{outlet}}

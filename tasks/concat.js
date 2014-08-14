@@ -3,7 +3,7 @@ module.exports = {
         separator: '\n'
     },
     dist: {
-        src: ['js/app/**/*.js'],
+        src: ['js/app/app.js', 'js/app/**/*.js'],
         dest: 'dist/<%= pkg.name %>.js'
     }
 };
