@@ -1,1 +1,1 @@
-var PhotoApp;
+var PhotoApp = null;

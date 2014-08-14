@@ -8,12 +8,23 @@ module.exports = function(grunt) {
     // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        concat: config('concat')
-    });
+        concat: config('concat'),
+        jshint: config('jshint'),
+        emberTemplates: config('emberTemplates'),
+        watch: {
+            files: ['templates/**/*.hbs', 'js/app/**/*.js'],
+            tasks: ['jshint', 'emberTemplates', 'concat']
+        }
+
+});
 
     grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-ember-templates');
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Default task(s).
-    grunt.registerTask('default', ['concat']);
+    grunt.registerTask('dist', ['jshint', 'emberTemplates', 'concat']);
+    grunt.registerTask('default', ['watch']);
 
 };
