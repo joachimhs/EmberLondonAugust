@@ -1,0 +1,7 @@
+{{#each album in arrangedContent}}
+    <div>
+        {{#link-to "albums.album" album}}
+            {{album.id}}
+        {{/link-to}}
+    </div>
+{{/each}}

@@ -1,1 +1,9 @@
 Photo album selected: {{id}}
+
+<div class="row">
+    {{#each photo in controller.photos}}
+        <div class="col-sm-2">
+            <img {{bind-attr src=photo.thumbnail}} />
+        </div>
+    {{/each}}
+</div>
