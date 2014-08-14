@@ -59,12 +59,3 @@ footer {
 .photoControl span {
     margin-top: 170px;
 }
-
-.photoArea {
-    max-width: 460px;
-}
-
-.photoThumbnail.is-selected {
-    border: 2px solid #000;
-    padding: 3px;
-}

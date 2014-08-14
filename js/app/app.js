@@ -1,1 +1,4 @@
-var PhotoApp = Ember.Application.create({});
+var PhotoApp = Ember.Application.create({
+
+});
+
